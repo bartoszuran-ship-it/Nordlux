@@ -8,6 +8,9 @@ import ProcessSteps from '@/components/ProcessSteps';
 import CtaBlock from '@/components/CtaBlock';
 import ContactForm from '@/components/ContactForm';
 import Reveal from '@/components/Reveal';
+import TrustBar from '@/components/TrustBar';
+import QuickNav from '@/components/QuickNav';
+import Testimonials from '@/components/Testimonials';
 import { FIRMENNAME, REGION, TELEFONNUMMER, TELEFONNUMMER_HREF } from '@/config/site';
 
 export const metadata: Metadata = {
@@ -42,19 +45,14 @@ export default function HomePage() {
           <div className="mt-10 flex justify-center">
             <CtaButtons variant="light" />
           </div>
-          <p className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-white/70">
-            <span className="flex items-center gap-1.5">
-              <CheckIcon /> Kostenlose Besichtigung
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckIcon /> Festpreisgarantie
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckIcon /> Versichert &amp; zertifiziert
-            </span>
-          </p>
         </div>
       </section>
+
+      {/* SCHNELLNAVIGATION */}
+      <QuickNav />
+
+      {/* TRUST-LEISTE */}
+      <TrustBar />
 
       {/* LEISTUNGEN */}
       <section className="bg-paper py-20 sm:py-28">
@@ -77,7 +75,7 @@ export default function HomePage() {
             ]}
             points={['Bis zu 15 Jahre Schutz', 'Deutliche optische Aufwertung', 'Bruchteil der Kosten einer Neueindeckung']}
             image="/images/leistung-beschichtung.webp"
-            alt="Handwerker in Arbeitskleidung trägt mit einer Rolle graue Dachbeschichtung auf ein Ziegeldach auf"
+            alt="Handwerker mit Sicherheitsausrüstung sprüht graue Dachbeschichtung mit einer Sprühpistole auf ein Ziegeldach"
             href="/dachbeschichtung/"
           />
 
@@ -102,7 +100,7 @@ export default function HomePage() {
             ]}
             points={['Für jede Fassadenart geeignet', 'Fachgerechte Entsorgung des Abwassers', 'Optional mit Imprägnierung']}
             image="/images/leistung-fassade.webp"
-            alt="Handwerker reinigt eine Hausfassade mit einer langstieligen Bürste und Wasserschlauch"
+            alt="Handwerker reinigt von einer Hubarbeitsbühne aus eine verschmutzte Hausfassade mit einem Hochdruckreiniger"
             href="/fassadenreinigung/"
           />
 
@@ -205,6 +203,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <Testimonials />
+
       {/* KONTAKT */}
       <section id="kontakt" className="bg-paper py-20 sm:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -236,14 +237,5 @@ export default function HomePage() {
 
       <CtaBlock />
     </>
-  );
-}
-
-function CheckIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <circle cx="12" cy="12" r="12" fill="#e8842c" />
-      <path d="M7 12.5l3 3 7-7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
   );
 }

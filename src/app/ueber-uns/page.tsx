@@ -100,6 +100,25 @@ export default function UeberUnsPage() {
               Termine, persönliche Ansprache und ein Team, das auch nach Abschluss der Arbeiten
               erreichbar bleibt.
             </p>
+
+            {/* TODO: Platzhalter-Orte vor Livegang durch das echte Einsatzgebiet ersetzen */}
+            <h3 className="mt-8 text-sm font-semibold uppercase tracking-wide text-amber">
+              Unser Einsatzgebiet
+            </h3>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {['[Ort 1]', '[Ort 2]', '[Ort 3]', '[Ort 4]', '[Ort 5]', '[Ort 6]'].map((ort) => (
+                <span
+                  key={ort}
+                  className="rounded-full border border-black/10 bg-white px-4 py-1.5 text-sm text-ink/70"
+                >
+                  {ort}
+                </span>
+              ))}
+            </div>
+            <p className="mt-3 text-xs text-ink/50">
+              Ihr Ort ist nicht dabei? Sprechen Sie uns einfach an — auf Anfrage sind wir auch
+              darüber hinaus für Sie im Einsatz.
+            </p>
           </Reveal>
         </div>
       </section>

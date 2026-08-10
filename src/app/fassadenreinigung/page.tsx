@@ -22,7 +22,7 @@ export default function FassadenreinigungPage() {
         title="Fassadenreinigung"
         subtitle="Algen, Moos und Verschmutzungen fachgerecht entfernt — für eine Fassade, die wieder strahlt."
         image="/images/leistung-fassade.webp"
-        alt="Handwerker reinigt eine Hausfassade mit einer langstieligen Bürste und Wasserschlauch"
+        alt="Handwerker reinigt von einer Hubarbeitsbühne aus eine verschmutzte Hausfassade mit einem Hochdruckreiniger"
       />
 
       <section className="bg-paper py-20 sm:py-28">

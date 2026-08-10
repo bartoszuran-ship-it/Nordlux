@@ -22,7 +22,7 @@ export default function DachbeschichtungPage() {
         title="Dachbeschichtung"
         subtitle="Schutz, Werterhalt und ein Dach wie neu — ohne die Kosten einer kompletten Neueindeckung."
         image="/images/leistung-beschichtung.webp"
-        alt="Handwerker trägt mit einer Rolle graue Dachbeschichtung auf ein Ziegeldach auf"
+        alt="Handwerker mit Sicherheitsausrüstung sprüht graue Dachbeschichtung mit einer Sprühpistole auf ein Ziegeldach"
       />
 
       {/* WARUM SINNVOLL */}
