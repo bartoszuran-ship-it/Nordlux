@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { TELEFONNUMMER, TELEFONNUMMER_HREF } from '@/config/site';
 
 const LEISTUNGEN = [
@@ -15,12 +15,30 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileLeistungenOpen, setMobileLeistungenOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-40 bg-ink/95 backdrop-blur supports-[backdrop-filter]:bg-ink/90 text-white">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-40 bg-ink/95 backdrop-blur supports-[backdrop-filter]:bg-ink/90 text-white transition-shadow duration-300">
+      <div
+        className={`mx-auto flex max-w-7xl items-center justify-between px-4 transition-all duration-300 sm:px-6 lg:px-8 ${
+          scrolled ? 'py-2.5' : 'py-4'
+        }`}
+      >
         <Link href="/" className="flex items-baseline gap-2">
-          <span className="text-xl font-extrabold tracking-tight">NORDLUX</span>
+          <span
+            className={`font-extrabold tracking-tight transition-all duration-300 ${
+              scrolled ? 'text-lg' : 'text-xl'
+            }`}
+          >
+            NORDLUX
+          </span>
           <span className="text-sm font-light text-white/70">Dach &amp; Fassade</span>
         </Link>
 

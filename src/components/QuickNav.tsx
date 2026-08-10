@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Reveal from './Reveal';
+import TiltCard from './TiltCard';
 
 const SERVICES = [
   {
@@ -49,27 +50,28 @@ const SERVICES = [
 
 export default function QuickNav() {
   return (
-    <section className="bg-paper py-14 sm:py-16">
+    <div className="relative z-10 -mt-16 pb-10 sm:-mt-20 sm:pb-14">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4">
+          <div className="grid grid-cols-2 divide-x divide-y divide-black/5 overflow-hidden rounded-card bg-white shadow-2xl sm:grid-cols-4 sm:divide-y-0">
             {SERVICES.map((service) => (
-              <Link
-                key={service.href}
-                href={service.href}
-                className="group flex flex-col items-center gap-3 rounded-card border border-black/5 bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-              >
-                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-amber/10 text-amber transition group-hover:bg-amber group-hover:text-white">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    {service.icon}
-                  </svg>
-                </span>
-                <span className="text-sm font-semibold text-ink">{service.label}</span>
-              </Link>
+              <TiltCard key={service.href} className="h-full">
+                <Link
+                  href={service.href}
+                  className="group flex h-full flex-col items-center justify-center gap-3 p-6 text-center transition hover:bg-paper sm:p-8"
+                >
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-amber/10 text-amber transition group-hover:bg-amber group-hover:text-white">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      {service.icon}
+                    </svg>
+                  </span>
+                  <span className="text-sm font-semibold text-ink">{service.label}</span>
+                </Link>
+              </TiltCard>
             ))}
           </div>
         </Reveal>
       </div>
-    </section>
+    </div>
   );
 }

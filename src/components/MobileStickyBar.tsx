@@ -2,7 +2,7 @@ import { TELEFONNUMMER_HREF, WHATSAPP_HREF } from '@/config/site';
 
 export default function MobileStickyBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 flex md:hidden border-t border-black/10 bg-white shadow-[0_-4px_16px_rgba(0,0,0,0.08)]">
+    <div className="fixed inset-x-0 bottom-0 z-50 flex md:hidden bg-white shadow-[0_-4px_16px_rgba(0,0,0,0.08)]">
       <a
         href={TELEFONNUMMER_HREF}
         className="flex flex-1 items-center justify-center gap-2 bg-amber py-4 font-semibold text-white"

@@ -11,6 +11,7 @@ import Reveal from '@/components/Reveal';
 import TrustBar from '@/components/TrustBar';
 import QuickNav from '@/components/QuickNav';
 import Testimonials from '@/components/Testimonials';
+import RoofAccent from '@/components/RoofAccent';
 import { FIRMENNAME, REGION, TELEFONNUMMER, TELEFONNUMMER_HREF } from '@/config/site';
 
 export const metadata: Metadata = {
@@ -35,6 +36,7 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/40" />
         <div className="relative mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 lg:px-8">
+          <RoofAccent className="mb-5" />
           <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-6xl">
             Ihr Dach. Unsere Verantwortung.
           </h1>

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import CtaButtons from './CtaButtons';
+import RoofAccent from './RoofAccent';
 
 export default function PageHero({
   title,
@@ -24,6 +25,7 @@ export default function PageHero({
       />
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/40" />
       <div className="relative mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 lg:px-8">
+        <RoofAccent className="mb-4" />
         <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-5xl">{title}</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg text-white/85">{subtitle}</p>
         <div className="mt-8 flex justify-center">
