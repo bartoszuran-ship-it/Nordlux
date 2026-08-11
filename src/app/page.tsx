@@ -49,7 +49,7 @@ export default function HomePage() {
               href="/kontakt/"
               className="inline-flex items-center justify-center rounded-full bg-amber px-8 py-4 font-semibold text-white shadow-lg shadow-amber/30 transition hover:bg-amber-dark sm:hidden"
             >
-              Jetzt Angebot anfordern
+              Kostenlose Besichtigung sichern
             </Link>
             <div className="hidden sm:block">
               <CtaButtons variant="light" />
