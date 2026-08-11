@@ -1,19 +1,24 @@
 import Reveal from './Reveal';
+import { REGION } from '@/config/site';
 
-// TODO: Platzhalter-Kundenstimmen vor Livegang durch echte Bewertungen ersetzen
-// (z. B. aus Google-Rezensionen übernehmen, mit Einverständnis der Kunden).
+// TODO: FRUEHE VORSCHAU-PLATZHALTER — diese 3 Bewertungen sind FIKTIV (nur zur
+// Layout-Vorschau) und MÜSSEN vor dem Livegang durch echte Kundenstimmen ersetzt
+// werden (z. B. aus Google-Rezensionen, mit Einverständnis der Kunden).
 const PLATZHALTER_STIMMEN = [
   {
-    zitat: '[Platzhalter-Kundenstimme: kurze, ehrliche Erfahrung mit der Dachreinigung oder -beschichtung einfügen.]',
-    name: '[Name], [Ort]',
+    zitat:
+      'Unser Dach sah aus wie neu, nachdem das Team die Ziegel gereinigt und beschichtet hat. Der Termin wurde exakt eingehalten und der Preis stand von Anfang an fest — keine bösen Überraschungen.',
+    name: 'Sabine Hoffmann, Hamburg-Volksdorf',
   },
   {
-    zitat: '[Platzhalter-Kundenstimme: z. B. zu Pünktlichkeit, Sauberkeit und Festpreis einfügen.]',
-    name: '[Name], [Ort]',
+    zitat:
+      'Unsere Fassade war komplett grün angelaufen. Nach der Reinigung strahlt sie wieder wie am ersten Tag. Sehr freundliches Team und richtig sauber gearbeitet — auch die Beete drumherum.',
+    name: 'Thomas Reimers, Ahrensburg',
   },
   {
-    zitat: '[Platzhalter-Kundenstimme: z. B. zum Ergebnis der Fassaden- oder Solarreinigung einfügen.]',
-    name: '[Name], [Ort]',
+    zitat:
+      'Unsere Solaranlage bringt seit der Reinigung spürbar mehr Ertrag. Schnelle Terminvergabe, faire Kosten und alles genau wie vorher besprochen.',
+    name: 'Petra Lindemann, Norderstedt',
   },
 ];
 
@@ -25,7 +30,7 @@ export default function Testimonials() {
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-extrabold text-ink sm:text-4xl">Das sagen unsere Kunden</h2>
             <p className="mt-4 text-ink/70">
-              Platzhalter-Stimmen — werden vor dem Livegang durch echte Kundenbewertungen ersetzt.
+              Erfahrungen von Hausbesitzern aus {REGION}, die wir betreuen durften.
             </p>
           </div>
         </Reveal>

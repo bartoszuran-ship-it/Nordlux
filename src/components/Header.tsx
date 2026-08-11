@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { TELEFONNUMMER, TELEFONNUMMER_HREF } from '@/config/site';
 
 const LEISTUNGEN = [
   { href: '/dachbeschichtung/', label: 'Dachbeschichtung' },
@@ -25,7 +24,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 bg-ink/95 backdrop-blur supports-[backdrop-filter]:bg-ink/90 text-white transition-shadow duration-300">
+    <header className="sticky top-0 z-40 bg-ink/95 backdrop-blur supports-[backdrop-filter]:bg-ink/90 text-white transition-shadow duration-300 md:top-9">
       <div
         className={`mx-auto flex max-w-7xl items-center justify-between px-4 transition-all duration-300 sm:px-6 lg:px-8 ${
           scrolled ? 'py-2.5' : 'py-4'
@@ -80,9 +79,6 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-5 md:flex">
-          <a href={TELEFONNUMMER_HREF} className="text-sm font-semibold text-white/90 hover:text-white">
-            {TELEFONNUMMER}
-          </a>
           <Link
             href="/kontakt/"
             className="rounded-full bg-amber px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-amber-dark"
