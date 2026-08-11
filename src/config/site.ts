@@ -27,4 +27,4 @@ export const SOCIAL = {
   facebook: '',
 };
 
-export const SITE_URL = 'https://www.nordlux-dach.de'; // TODO: finale Domain eintragen
+export const SITE_URL = 'https://nordlux-gamma.vercel.app'; // TODO: auf finale eigene Domain umstellen, sobald vorhanden
