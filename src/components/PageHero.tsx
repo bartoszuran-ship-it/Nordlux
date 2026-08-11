@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import CtaButtons from './CtaButtons';
 import RoofAccent from './RoofAccent';
 
@@ -29,7 +30,15 @@ export default function PageHero({
         <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-5xl">{title}</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg text-white/85">{subtitle}</p>
         <div className="mt-8 flex justify-center">
-          <CtaButtons variant="light" />
+          <Link
+            href="/kontakt/"
+            className="inline-flex items-center justify-center rounded-full bg-amber px-8 py-4 font-semibold text-white shadow-lg shadow-amber/30 transition hover:bg-amber-dark sm:hidden"
+          >
+            Jetzt Angebot anfordern
+          </Link>
+          <div className="hidden sm:block">
+            <CtaButtons variant="light" />
+          </div>
         </div>
       </div>
     </section>

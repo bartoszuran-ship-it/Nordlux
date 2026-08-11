@@ -13,6 +13,9 @@ export default function Reveal({
   delay?: number;
   direction?: 'up' | 'left' | 'right';
 }) {
+  // Observed on this untransformed wrapper — the animated element (below) can be
+  // translated far off-screen, which would otherwise make IntersectionObserver
+  // think it never enters the viewport and the reveal would never fire.
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -37,12 +40,13 @@ export default function Reveal({
   const directionClass = direction === 'left' ? 'reveal-left' : direction === 'right' ? 'reveal-right' : '';
 
   return (
-    <div
-      ref={ref}
-      className={`reveal ${directionClass} ${visible ? 'is-visible' : ''} ${className}`}
-      style={delay ? { animationDelay: `${delay}ms` } : undefined}
-    >
-      {children}
+    <div ref={ref} className={className}>
+      <div
+        className={`reveal ${directionClass} ${visible ? 'is-visible' : ''}`}
+        style={delay ? { animationDelay: `${delay}ms` } : undefined}
+      >
+        {children}
+      </div>
     </div>
   );
 }

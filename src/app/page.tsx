@@ -45,7 +45,15 @@ export default function HomePage() {
             sauber, zum Festpreis.
           </p>
           <div className="mt-10 flex justify-center">
-            <CtaButtons variant="light" />
+            <Link
+              href="/kontakt/"
+              className="inline-flex items-center justify-center rounded-full bg-amber px-8 py-4 font-semibold text-white shadow-lg shadow-amber/30 transition hover:bg-amber-dark sm:hidden"
+            >
+              Jetzt Angebot anfordern
+            </Link>
+            <div className="hidden sm:block">
+              <CtaButtons variant="light" />
+            </div>
           </div>
         </div>
       </section>
