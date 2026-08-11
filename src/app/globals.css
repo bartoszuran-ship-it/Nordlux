@@ -78,6 +78,21 @@ body {
   animation: draw-line 0.4s ease-out 0.5s forwards;
 }
 
+@keyframes menu-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-menu-overlay {
+  animation: menu-fade-in 0.25s ease-out;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
@@ -96,5 +111,9 @@ body {
   .ken-burns-target {
     animation: none !important;
     transform: scale(1) !important;
+  }
+
+  .mobile-menu-overlay {
+    animation: none !important;
   }
 }
