@@ -49,6 +49,35 @@ body {
   animation: draw-line 0.6s ease-out 1.05s forwards;
 }
 
+@keyframes ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.ken-burns-target {
+  transform: scale(1);
+}
+
+.reveal.is-visible .ken-burns-target {
+  animation: ken-burns 9s ease-out forwards;
+}
+
+.success-check-circle {
+  stroke-dasharray: 145;
+  stroke-dashoffset: 145;
+  animation: draw-line 0.6s ease-out forwards;
+}
+
+.success-check-mark {
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  animation: draw-line 0.4s ease-out 0.5s forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
@@ -57,8 +86,15 @@ body {
   }
 
   .roof-accent-roof,
-  .roof-accent-chimney {
+  .roof-accent-chimney,
+  .success-check-circle,
+  .success-check-mark {
     stroke-dashoffset: 0;
     animation: none !important;
+  }
+
+  .ken-burns-target {
+    animation: none !important;
+    transform: scale(1) !important;
   }
 }

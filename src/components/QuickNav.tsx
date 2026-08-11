@@ -8,10 +8,9 @@ const SERVICES = [
     label: 'Dachbeschichtung',
     icon: (
       <>
-        <rect x="3" y="4" width="7" height="4" rx="1" stroke="currentColor" strokeWidth="1.8" />
-        <path d="M6.5 8v4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <path d="M6.5 12l6 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <path d="M12.5 18l3-3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <rect x="4" y="4" width="12" height="6" rx="1.5" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M10 10v3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M10 13l7 7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
       </>
     ),
   },

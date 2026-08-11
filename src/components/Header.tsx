@@ -102,50 +102,72 @@ export default function Header() {
         </button>
       </div>
 
-      {mobileOpen && (
-        <div className="border-t border-white/10 px-4 pb-6 md:hidden">
-          <button
-            className="flex w-full items-center justify-between py-3 text-left text-sm font-medium text-white/90"
-            onClick={() => setMobileLeistungenOpen((v) => !v)}
-          >
-            Leistungen
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              className={`transition ${mobileLeistungenOpen ? 'rotate-180' : ''}`}
-              aria-hidden="true"
-            >
-              <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
-          {mobileLeistungenOpen && (
-            <div className="pl-4">
-              {LEISTUNGEN.map((item) => (
-                <Link key={item.href} href={item.href} className="block py-2 text-sm text-white/80">
-                  {item.label}
-                </Link>
-              ))}
+      <div
+        className="grid transition-[grid-template-rows] duration-300 ease-in-out md:hidden"
+        style={{ gridTemplateRows: mobileOpen ? '1fr' : '0fr' }}
+      >
+        <div className="overflow-hidden border-t border-white/10">
+          <div className="px-4 pb-6 pt-3">
+            <div className="divide-y divide-white/10">
+              <div className="py-1">
+                <button
+                  className="flex w-full items-center justify-between rounded-lg px-2 py-3 text-left text-sm font-medium text-white/90 transition hover:bg-white/5"
+                  onClick={() => setMobileLeistungenOpen((v) => !v)}
+                  aria-expanded={mobileLeistungenOpen}
+                >
+                  Leistungen
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className={`transition-transform duration-300 ${mobileLeistungenOpen ? 'rotate-180' : ''}`}
+                    aria-hidden="true"
+                  >
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                <div
+                  className="grid transition-[grid-template-rows] duration-300 ease-in-out"
+                  style={{ gridTemplateRows: mobileLeistungenOpen ? '1fr' : '0fr' }}
+                >
+                  <div className="overflow-hidden">
+                    <div className="pb-2 pl-2">
+                      {LEISTUNGEN.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className="block rounded-lg px-3 py-2.5 text-sm text-white/70 transition hover:bg-white/5 hover:text-white"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Link
+                href="/ueber-uns/"
+                className="block rounded-lg px-2 py-3 text-sm font-medium text-white/90 transition hover:bg-white/5"
+              >
+                Über uns
+              </Link>
+              <Link
+                href="/kontakt/"
+                className="block rounded-lg px-2 py-3 text-sm font-medium text-white/90 transition hover:bg-white/5"
+              >
+                Kontakt
+              </Link>
             </div>
-          )}
-          <Link href="/ueber-uns/" className="block py-3 text-sm font-medium text-white/90">
-            Über uns
-          </Link>
-          <Link href="/kontakt/" className="block py-3 text-sm font-medium text-white/90">
-            Kontakt
-          </Link>
-          <a href={TELEFONNUMMER_HREF} className="mt-2 block py-3 text-sm font-semibold text-white">
-            {TELEFONNUMMER}
-          </a>
-          <Link
-            href="/kontakt/"
-            className="mt-2 block rounded-full bg-amber px-5 py-3 text-center text-sm font-semibold text-white"
-          >
-            Kostenloses Angebot
-          </Link>
+            <Link
+              href="/kontakt/"
+              className="mt-4 block rounded-full bg-amber px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-amber-dark"
+            >
+              Kostenloses Angebot
+            </Link>
+          </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }

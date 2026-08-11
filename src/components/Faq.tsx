@@ -33,11 +33,14 @@ export default function Faq({ items }: { items: FaqItem[] }) {
                 <path d="M6 9l6 6 6-6" stroke="#e8842c" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
-            {isOpen && (
-              <div className="px-6 pb-5 text-sm leading-relaxed text-ink/70">
-                {item.antwort}
+            <div
+              className="grid transition-[grid-template-rows] duration-300 ease-in-out"
+              style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
+            >
+              <div className="overflow-hidden">
+                <div className="px-6 pb-5 text-sm leading-relaxed text-ink/70">{item.antwort}</div>
               </div>
-            )}
+            </div>
           </div>
         );
       })}

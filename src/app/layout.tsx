@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import MobileStickyBar from '@/components/MobileStickyBar';
+import ScrollProgress from '@/components/ScrollProgress';
 import { localBusinessSchema } from '@/lib/schema';
 import { FIRMENNAME, SITE_URL } from '@/config/site';
 
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema()) }}
         />
+        <ScrollProgress />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

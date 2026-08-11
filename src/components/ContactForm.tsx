@@ -75,7 +75,27 @@ export default function ContactForm() {
   if (status === 'success') {
     return (
       <div className="rounded-card bg-white p-8 text-center shadow-lg">
-        <p className="text-lg font-semibold text-ink">Vielen Dank für Ihre Anfrage!</p>
+        <svg width="56" height="56" viewBox="0 0 52 52" className="mx-auto" aria-hidden="true">
+          <circle
+            className="success-check-circle"
+            cx="26"
+            cy="26"
+            r="23"
+            fill="none"
+            stroke="#e8842c"
+            strokeWidth="2.5"
+          />
+          <path
+            className="success-check-mark"
+            d="M14 27 L22 35 L38 17"
+            fill="none"
+            stroke="#e8842c"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+        <p className="mt-4 text-lg font-semibold text-ink">Vielen Dank für Ihre Anfrage!</p>
         <p className="mt-2 text-sm text-ink/70">
           Wir haben Ihre Nachricht erhalten und melden uns schnellstmöglich bei Ihnen.
         </p>

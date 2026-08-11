@@ -8,11 +8,10 @@ import ProcessSteps from '@/components/ProcessSteps';
 import CtaBlock from '@/components/CtaBlock';
 import ContactForm from '@/components/ContactForm';
 import Reveal from '@/components/Reveal';
-import TrustBar from '@/components/TrustBar';
 import QuickNav from '@/components/QuickNav';
 import Testimonials from '@/components/Testimonials';
 import RoofAccent from '@/components/RoofAccent';
-import { FIRMENNAME, REGION, TELEFONNUMMER, TELEFONNUMMER_HREF } from '@/config/site';
+import { FIRMENNAME, REGION } from '@/config/site';
 
 export const metadata: Metadata = {
   title: `${FIRMENNAME} | Dachbeschichtung, Dach- & Fassadenreinigung`,
@@ -52,9 +51,6 @@ export default function HomePage() {
 
       {/* SCHNELLNAVIGATION */}
       <QuickNav />
-
-      {/* TRUST-LEISTE */}
-      <TrustBar />
 
       {/* LEISTUNGEN */}
       <section className="bg-paper py-20 sm:py-28">
@@ -220,12 +216,6 @@ export default function HomePage() {
                 Rufen Sie uns direkt an oder schreiben Sie uns per WhatsApp — schnell, unkompliziert
                 und ohne Warteschleife.
               </p>
-              <a
-                href={TELEFONNUMMER_HREF}
-                className="mt-8 block text-4xl font-extrabold text-ink hover:text-amber sm:text-5xl"
-              >
-                {TELEFONNUMMER}
-              </a>
               <div className="mt-8">
                 <CtaButtons variant="dark" />
               </div>

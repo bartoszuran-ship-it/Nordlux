@@ -23,14 +23,16 @@ export default function ServiceSection({
     <div className={`grid items-center gap-10 md:grid-cols-2 md:gap-16 ${reverse ? 'md:[direction:rtl]' : ''}`}>
       <Reveal className={reverse ? 'md:[direction:ltr]' : ''}>
         <div className="relative aspect-[4/3] overflow-hidden rounded-card shadow-xl">
-          <Image
-            src={image}
-            alt={alt}
-            fill
-            loading="lazy"
-            sizes="(max-width: 768px) 100vw, 600px"
-            className="object-cover"
-          />
+          <div className="ken-burns-target relative h-full w-full">
+            <Image
+              src={image}
+              alt={alt}
+              fill
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 600px"
+              className="object-cover"
+            />
+          </div>
         </div>
       </Reveal>
       <Reveal delay={100} className={reverse ? 'md:[direction:ltr]' : ''}>
