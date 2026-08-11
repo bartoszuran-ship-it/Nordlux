@@ -21,6 +21,28 @@ body {
   }
 }
 
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @layer utilities {
   .reveal {
     opacity: 0;
@@ -28,6 +50,22 @@ body {
   }
   .reveal.is-visible {
     animation: fade-up 0.4s ease-out forwards;
+  }
+}
+
+/* Directional wipe-in only on desktop — mobile keeps the simple fade-up above */
+@media (min-width: 768px) {
+  .reveal.reveal-left {
+    transform: translateX(-40px);
+  }
+  .reveal.reveal-right {
+    transform: translateX(40px);
+  }
+  .reveal.reveal-left.is-visible {
+    animation: fade-left 0.6s ease-out forwards;
+  }
+  .reveal.reveal-right.is-visible {
+    animation: fade-right 0.6s ease-out forwards;
   }
 }
 
@@ -96,7 +134,7 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
-    transform: none;
+    transform: none !important;
     animation: none !important;
   }
 

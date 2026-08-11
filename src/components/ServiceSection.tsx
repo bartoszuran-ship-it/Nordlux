@@ -21,7 +21,7 @@ export default function ServiceSection({
 }) {
   return (
     <div className={`grid items-center gap-10 md:grid-cols-2 md:gap-16 ${reverse ? 'md:[direction:rtl]' : ''}`}>
-      <Reveal className={reverse ? 'md:[direction:ltr]' : ''}>
+      <Reveal direction={reverse ? 'right' : 'left'} className={reverse ? 'md:[direction:ltr]' : ''}>
         <div className="relative aspect-[4/3] overflow-hidden rounded-card shadow-xl">
           <div className="ken-burns-target relative h-full w-full">
             <Image
@@ -35,7 +35,7 @@ export default function ServiceSection({
           </div>
         </div>
       </Reveal>
-      <Reveal delay={100} className={reverse ? 'md:[direction:ltr]' : ''}>
+      <Reveal direction={reverse ? 'left' : 'right'} delay={100} className={reverse ? 'md:[direction:ltr]' : ''}>
         <h3 className="text-2xl font-extrabold text-ink sm:text-3xl">{title}</h3>
         <div className="mt-4 space-y-3 text-ink/70">
           {paragraphs.map((p) => (
