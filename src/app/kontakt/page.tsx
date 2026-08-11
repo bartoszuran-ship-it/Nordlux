@@ -36,13 +36,13 @@ export default function KontaktPage() {
           <div className="grid gap-12 md:grid-cols-2 md:gap-16">
             <Reveal>
               <div className="space-y-8">
-                <div>
+                <div className="hidden md:block">
                   <h2 className="text-sm font-semibold uppercase tracking-wide text-amber">Telefon</h2>
                   <a href={TELEFONNUMMER_HREF} className="mt-1 block text-3xl font-extrabold text-ink hover:text-amber sm:text-4xl">
                     {TELEFONNUMMER}
                   </a>
                 </div>
-                <div>
+                <div className="hidden md:block">
                   <h2 className="text-sm font-semibold uppercase tracking-wide text-amber">WhatsApp</h2>
                   <p className="mt-1 text-2xl font-bold text-ink">{WHATSAPP_NUMMER}</p>
                 </div>

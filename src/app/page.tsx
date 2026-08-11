@@ -37,11 +37,13 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 lg:px-8">
           <RoofAccent className="mb-5" />
           <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-6xl">
-            Ihr Dach. Unsere Verantwortung.
+            Dach &amp; Fassade
+            <br />
+            wie am ersten Tag.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-white/85 sm:text-xl">
-            Dachbeschichtung, Dach-, Fassaden- und Solarreinigung in {REGION} — sauber,
-            schonend, zum Festpreis.
+            Dachbeschichtung, Dach-, Fassaden- und Solarreinigung in {REGION} — schonend,
+            sauber, zum Festpreis.
           </p>
           <div className="mt-10 flex justify-center">
             <CtaButtons variant="light" />
