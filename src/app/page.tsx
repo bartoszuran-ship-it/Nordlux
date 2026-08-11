@@ -217,7 +217,7 @@ export default function HomePage() {
       <section id="kontakt" className="bg-paper py-20 sm:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 md:grid-cols-2 md:gap-16">
-            <Reveal>
+            <Reveal className="text-center md:text-left">
               <h2 className="text-3xl font-extrabold text-ink sm:text-4xl">
                 Jetzt kostenlose Besichtigung anfragen
               </h2>
