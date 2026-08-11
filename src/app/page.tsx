@@ -223,6 +223,7 @@ export default function HomePage() {
               </div>
             </Reveal>
             <Reveal delay={100}>
+              <h3 className="mb-4 text-xl font-bold text-ink">Kontaktformular</h3>
               <ContactForm />
             </Reveal>
           </div>

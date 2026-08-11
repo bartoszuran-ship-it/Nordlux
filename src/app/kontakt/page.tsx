@@ -2,15 +2,7 @@ import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
 import CtaButtons from '@/components/CtaButtons';
 import Reveal from '@/components/Reveal';
-import {
-  ADRESSE,
-  EMAIL,
-  OEFFNUNGSZEITEN,
-  REGION,
-  TELEFONNUMMER,
-  TELEFONNUMMER_HREF,
-  WHATSAPP_NUMMER,
-} from '@/config/site';
+import { ADRESSE, EMAIL, OEFFNUNGSZEITEN, REGION } from '@/config/site';
 
 export const metadata: Metadata = {
   title: 'Kontakt',
@@ -36,16 +28,6 @@ export default function KontaktPage() {
           <div className="grid gap-12 md:grid-cols-2 md:gap-16">
             <Reveal>
               <div className="space-y-8">
-                <div className="hidden md:block">
-                  <h2 className="text-sm font-semibold uppercase tracking-wide text-amber">Telefon</h2>
-                  <a href={TELEFONNUMMER_HREF} className="mt-1 block text-3xl font-extrabold text-ink hover:text-amber sm:text-4xl">
-                    {TELEFONNUMMER}
-                  </a>
-                </div>
-                <div className="hidden md:block">
-                  <h2 className="text-sm font-semibold uppercase tracking-wide text-amber">WhatsApp</h2>
-                  <p className="mt-1 text-2xl font-bold text-ink">{WHATSAPP_NUMMER}</p>
-                </div>
                 <div>
                   <h2 className="text-sm font-semibold uppercase tracking-wide text-amber">E-Mail</h2>
                   <a href={`mailto:${EMAIL}`} className="mt-1 block text-xl font-bold text-ink hover:text-amber">
@@ -79,6 +61,7 @@ export default function KontaktPage() {
             </Reveal>
 
             <Reveal delay={100}>
+              <h2 className="mb-4 text-xl font-bold text-ink">Kontaktformular</h2>
               <ContactForm />
             </Reveal>
           </div>
