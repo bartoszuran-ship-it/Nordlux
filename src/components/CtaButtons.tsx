@@ -1,4 +1,4 @@
-import { TELEFONNUMMER, TELEFONNUMMER_HREF, WHATSAPP_HREF } from '@/config/site';
+import { TELEFONNUMMER_HREF, WHATSAPP_HREF } from '@/config/site';
 
 export default function CtaButtons({
   variant = 'light',
@@ -16,7 +16,7 @@ export default function CtaButtons({
     <div className={`flex flex-wrap gap-4 ${className}`}>
       <a
         href={TELEFONNUMMER_HREF}
-        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-amber px-8 py-4 font-semibold text-white shadow-lg shadow-amber/30 transition hover:bg-amber-dark"
+        className="inline-flex min-w-[260px] items-center justify-center gap-2 whitespace-nowrap rounded-full bg-amber px-8 py-4 font-semibold text-white shadow-lg shadow-amber/30 transition hover:bg-amber-dark"
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path
@@ -24,13 +24,13 @@ export default function CtaButtons({
             fill="currentColor"
           />
         </svg>
-        Jetzt anrufen: {TELEFONNUMMER}
+        Jetzt anrufen
       </a>
       <a
         href={WHATSAPP_HREF}
         target="_blank"
         rel="noopener noreferrer"
-        className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full px-8 py-4 font-semibold transition ${secondaryClasses}`}
+        className={`inline-flex min-w-[260px] items-center justify-center gap-2 whitespace-nowrap rounded-full px-8 py-4 font-semibold transition ${secondaryClasses}`}
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path

@@ -23,11 +23,22 @@ export const metadata: Metadata = {
   },
   description:
     'Dachbeschichtung, Dachreinigung, Fassadenreinigung und Solarreinigung vom Fachbetrieb — kostenlose Besichtigung, Festpreisgarantie, versichert und zertifiziert.',
+  icons: {
+    icon: [
+      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'de_DE',
     siteName: FIRMENNAME,
-    images: [{ url: '/images/hero-dach.webp', width: 1920, height: 1080, alt: 'Renoviertes Dach von Nordlux Dach & Fassade' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: `${FIRMENNAME} — Dachbeschichtung, Dach- und Fassadenreinigung` }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
   },
 };
 
