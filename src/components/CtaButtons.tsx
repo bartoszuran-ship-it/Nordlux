@@ -13,7 +13,7 @@ export default function CtaButtons({
       : 'border-2 border-ink text-ink hover:bg-ink hover:text-white';
 
   return (
-    <div className={`flex flex-wrap gap-4 ${className}`}>
+    <div className={`flex flex-wrap justify-center gap-4 ${className}`}>
       <a
         href={TELEFONNUMMER_HREF}
         className="inline-flex min-w-[260px] items-center justify-center gap-2 whitespace-nowrap rounded-full bg-amber px-8 py-4 font-semibold text-white shadow-lg shadow-amber/30 transition hover:bg-amber-dark"

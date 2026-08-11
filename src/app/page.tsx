@@ -62,7 +62,7 @@ export default function HomePage() {
       <QuickNav />
 
       {/* LEISTUNGEN */}
-      <section className="bg-paper py-20 sm:py-28">
+      <section className="overflow-x-hidden bg-paper py-20 sm:py-28">
         <div className="mx-auto max-w-7xl space-y-24 px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">

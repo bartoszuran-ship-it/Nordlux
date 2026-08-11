@@ -4,12 +4,10 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
   background-color: #f8f9fa;
-  overflow-x: hidden;
 }
 
 @keyframes fade-up {
