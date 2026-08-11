@@ -5,7 +5,6 @@ import CtaButtons from '@/components/CtaButtons';
 import ServiceSection from '@/components/ServiceSection';
 import BeforeAfterSlider from '@/components/BeforeAfterSlider';
 import ProcessSteps from '@/components/ProcessSteps';
-import CtaBlock from '@/components/CtaBlock';
 import ContactForm from '@/components/ContactForm';
 import Reveal from '@/components/Reveal';
 import QuickNav from '@/components/QuickNav';
@@ -229,8 +228,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <CtaBlock />
     </>
   );
 }
