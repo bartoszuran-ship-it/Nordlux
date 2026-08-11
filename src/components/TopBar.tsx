@@ -2,8 +2,8 @@ import { EMAIL, TELEFONNUMMER, TELEFONNUMMER_HREF } from '@/config/site';
 
 export default function TopBar() {
   return (
-    <div className="sticky top-0 z-50 hidden h-9 items-center border-b border-white/10 bg-ink text-white md:flex">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-end gap-6 px-4 text-xs text-white/80 sm:px-6 lg:px-8">
+    <div className="sticky top-0 z-50 flex h-9 items-center border-b border-white/10 bg-ink text-white">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-center gap-4 px-4 text-xs text-white/80 sm:gap-6 sm:px-6 lg:px-8">
         <a href={TELEFONNUMMER_HREF} className="flex items-center gap-1.5 hover:text-white">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path

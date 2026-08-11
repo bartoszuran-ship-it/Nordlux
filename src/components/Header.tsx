@@ -24,7 +24,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 bg-ink/95 backdrop-blur supports-[backdrop-filter]:bg-ink/90 text-white transition-shadow duration-300 md:top-9">
+    <header className="sticky top-9 z-40 bg-ink/95 backdrop-blur supports-[backdrop-filter]:bg-ink/90 text-white transition-shadow duration-300">
       <div
         className={`mx-auto flex max-w-7xl items-center justify-between px-4 transition-all duration-300 sm:px-6 lg:px-8 ${
           scrolled ? 'py-2.5' : 'py-4'
